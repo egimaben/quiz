@@ -57,6 +57,9 @@ Books.propTypes={
     authorName:PropTypes.string
   })
 }
+Image.propTypes={
+  src:PropTypes.string.isRequired
+}
   
   export const Footer = () => {
     return <footer className='footer'>Copyright C</footer>

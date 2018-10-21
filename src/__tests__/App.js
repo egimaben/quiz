@@ -21,7 +21,7 @@ it('Footer renders without crashing', () => {
 });
 it('Image renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Image />, div);
+  ReactDOM.render(<Image src=''/>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 it('Book renders without crashing', () => {
