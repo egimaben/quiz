@@ -21,7 +21,7 @@ jobs:
             - ./node_modules
       - run: # run tests
           name: Run Test and Coverage
-          command: |
+          command: | #npm test -- --coverage
             ./cc-test-reporter before-build
-            npm test -- --coverage
+            pwd
             ./cc-test-reporter after-build --exit-code $?
