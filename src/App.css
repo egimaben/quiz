@@ -122,8 +122,5 @@
     transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
   }
 }
-@keyframes div-fade {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-  }
+
  
