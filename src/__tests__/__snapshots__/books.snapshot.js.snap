@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displays books component correctly 1`] = `
+<div
+  className="books"
+/>
+`;
+
+exports[`displays books component correctly 2`] = `
+<div
+  className="books"
+>
+  <button
+    className="continue-button"
+    onClick={[MockFunction]}
+  >
+    Continue
+  </button>
+</div>
+`;

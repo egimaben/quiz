@@ -47,6 +47,7 @@ class App extends Component {
       gameStarting: false,
       currentAuthorData: {},
       selectedBook: '',
+      bookStyle:'book',
       index:prevState.index+1
     }});
   }

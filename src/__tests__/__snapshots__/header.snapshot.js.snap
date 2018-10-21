@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<header
+  className="header"
+>
+  <h2>
+    Author Quiz
+  </h2>
+  Do you know your authors?
+</header>
+`;
