@@ -34,12 +34,6 @@ it('fuckin loads',()=>{
     'authorName': 'Mathew Farrel',
     'avatar': 'mathew.jpg'
   };
-  const secondAuthor={
-    'bookOptions': ['The story teller\'s secret', 'The ragged edge of night', 'Beneath a scarlet sky', 'The tuscan child'],
-    'authoredBook': 'The ragged edge of night',
-    'authorName': 'Olivier Hawker',
-    'avatar': 'olivier.jpg'
-  }
 
   //confirm state after wrong selection
 
@@ -69,7 +63,6 @@ it('fuckin loads',()=>{
   expect(app.state().bookStyle).toBe('book');
   expect(app.state().selectedBook).toBe('');
   expect(app.state().index).toBe(1);
-  console.log(app.state());
   
   // expect(booksDiv.length).toBe(4);
 })

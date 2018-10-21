@@ -20,9 +20,8 @@
       "src/**/*.{js,jsx}",
       "!src/serviceWorker.js",
       "!src/setUpTests.js"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/src/setUpTests.js"
-  },
+    ]
+    },
   "eslintConfig": {
     "extends": "react-app"
   },
