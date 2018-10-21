@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`uses right selection/red highlight 1`] = `
+<div
+  className="right-book"
+  onClick={[Function]}
+>
+  Animal farm
+</div>
+`;
+
+exports[`uses right selection/red highlight 2`] = `
+<div
+  className="book"
+  onClick={[Function]}
+>
+  Animal farm
+</div>
+`;
+
+exports[`uses right selection/red highlight 3`] = `
+<div
+  className="wrong-book"
+  onClick={[Function]}
+>
+  Animal farm
+</div>
+`;
