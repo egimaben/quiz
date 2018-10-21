@@ -1,0 +1,136 @@
+.container{
+  padding:20px;
+  display:flex;
+  flex-flow:column wrap;
+  min-height:100vh;
+  border:1px solid gray;
+  justify-content: space-evenly;
+}
+.container>*{
+  flex:1 100%;
+  padding:20px;
+}
+.header{
+  background:lightgray;
+  border-radius: 5px;
+  flex:1;
+  border:1px solid gray;
+
+}
+.footer{
+  background:lightgray;
+  border-radius: 5px;
+ flex:1;
+ border:1px solid gray;
+}
+.main{
+  border-radius: 5px;
+  display:flex;
+  margin:10px 0px;
+  flex:4;
+  border:1px solid gray;
+  background-color:lightgray;
+  
+}
+.author-img {
+  flex:1;
+  margin:10px;
+  border-radius: 5px;
+  border:1px solid gray;
+
+}
+.wrong-book{
+  background:lightcoral;
+  padding:10px;
+  margin:20px;
+  border-radius:5px;
+  font-weight:bold;
+}
+.right-book{
+  background:lime;
+  padding:10px;
+  margin:20px;
+  border-radius:5px;
+  font-weight:bold;
+}
+.book{
+  background:lightblue;
+  padding:10px;
+  margin:20px;
+  border-radius:5px;
+  font-weight:bold;
+}
+.book:hover{
+  background:rgb(141, 210, 233);
+  padding:10px;
+  margin:20px;
+  cursor: pointer;
+}
+.book:active{
+  background:lightskyblue;
+  padding:10px;
+  margin:20px;
+}
+.continue-button{
+  width:70px;
+  height:30px;
+  border-radius:5px;
+  margin-left:40%;
+  margin-right:60%;
+  background-color:rgb(238, 94, 94);
+}
+.continue-button:hover{
+  width:70px;
+  height:30px;
+  border-radius:5px;
+  margin-left:40%;
+  margin-right:60%;
+  background-color:rgb(255, 94, 94);
+}
+.books{
+  flex:2;
+  margin:10px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius:5px;
+  border:1px solid gray;
+  background-color:white
+
+}
+@media all and (max-width:600px){
+  .main{
+    flex-direction:column;
+  }
+  .books{
+    flex:1;
+  }
+  
+}
+.fade {
+  animation: fade-in-keyframes 1s;
+}
+@keyframes fade-in-keyframes {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+.animated-div {
+  animation-name: cssAnimation;
+  animation-duration:0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: inherit;
+}
+@keyframes cssAnimation {
+  from {
+    transform: rotate(180deg) scale(1) skew(0deg) translate(0px);
+  }
+  to {
+    transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+  }
+}
+@keyframes div-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+ 
