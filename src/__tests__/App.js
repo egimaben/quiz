@@ -10,7 +10,7 @@ it('app renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
-it('fuckin loads',()=>{
+it('app responds accurately to all user interaction',()=>{
   const app = mount(<App />);
   //ensure all children
   expect(app.find('div').first().length).toBe(1);
