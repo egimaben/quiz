@@ -52,10 +52,13 @@ export const Header = () => {
 Books.propTypes={
   authorData:PropTypes.shape({
     bookOptions:PropTypes.arrayOf(PropTypes.string),
-    authoredBook:PropTypes.string,
-    avatar:PropTypes.string,
+    authoredBook:PropTypes.string.isRequired,
+    avatar:PropTypes.string.isRequired,
     authorName:PropTypes.string
   })
+}
+Book.propTypes={
+  title:PropTypes.string.isRequired
 }
 Image.propTypes={
   src:PropTypes.string.isRequired
