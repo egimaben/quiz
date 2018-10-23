@@ -1,4 +1,4 @@
-export const data = [
+export let data = [
     {
       'bookOptions': ['What have you done', 'Every Breath', 'My sister\'s grave', 'Due princess'],
       'authoredBook': 'What have you done',

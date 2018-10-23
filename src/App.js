@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import {Header,Footer,Image,Books} from './quizComponents';
+import { MainBody, Header, Footer } from './quizComponents';
 import './App.css';
-import {data} from './data';
-
+import { data } from './data';
+import { BrowserRouter, Route, withRouter } from 'react-router-dom';
+import AuthorForm from './AuthorForm';
 class App extends Component {
   state = {
     userPassed: false,
@@ -10,9 +11,8 @@ class App extends Component {
     currentAuthorData: {},
     bookStyle: 'book',
     selectedBook: '',
-    index:0
+    index: 0
   }
-
   objectIsEmpty = (obj) => {
     for (let prop in obj) {
       if (obj.hasOwnProperty(prop))
@@ -20,7 +20,6 @@ class App extends Component {
     }
     return true;
   }
-
   onWrongAnswer = (selectedBook, authorData) => {
     this.setState({
       userPassed: false,
@@ -30,7 +29,6 @@ class App extends Component {
       bookStyle: 'wrong-book'
     });
   }
-
   onRightAnswer = (selectedBook, authorData) => {
     this.setState({
       userPassed: true,
@@ -41,24 +39,24 @@ class App extends Component {
     });
   }
   onContinue = () => {
-    this.setState((prevState)=>{
+    this.setState((prevState) => {
       return {
-      userPassed: false,
-      gameStarting: false,
-      currentAuthorData: {},
-      selectedBook: '',
-      bookStyle:'book',
-      index:prevState.index+1
-    }});
+        userPassed: false,
+        gameStarting: false,
+        currentAuthorData: {},
+        selectedBook: '',
+        bookStyle: 'book',
+        index: prevState.index + 1
+      }
+    });
   }
-
   render() {
-    const { bookStyle, selectedBook, userPassed, gameStarting, currentAuthorData,index } = this.state;
+    const { bookStyle, selectedBook, userPassed, gameStarting, currentAuthorData, index } = this.state;
     let authorData = {};
     let showContinueButton = false;
     //at beginning of game
     if (!userPassed && gameStarting && this.objectIsEmpty(currentAuthorData)) {
-      authorData = data[index%data.length];
+      authorData = data[index % data.length];
     }
     //game on, and wrong selection
     else if (!userPassed && !gameStarting && !this.objectIsEmpty(currentAuthorData)) {
@@ -71,26 +69,37 @@ class App extends Component {
     }
     //game on, got right answer, clicked continue
     else if (!userPassed && !gameStarting && this.objectIsEmpty(currentAuthorData)) {
-      authorData = data[index%data.length];
+      authorData = data[index % data.length];
     }
+    const MainBodyWrapper = () => {
+      return <MainBody onWrongAnswer={this.onWrongAnswer}
+        onRightAnswer={this.onRightAnswer}
+        bookStyle={bookStyle}
+        selectedBook={selectedBook}
+        showContinueButton={showContinueButton}
+        onContinue={this.onContinue}
+        selectBook={this.selectBook}
+        authorData={authorData} />
+    };
+    const AuthorFormWrapper = withRouter(({ history }) =>
+      <AuthorForm onSubmit={(author) => {
+        data.push(author)
+        history.push('/');
+      }}
+      />
+    );
     return (
-      <div className='container'>
-        <Header />
-        <div className='main'>
-          <Image src={'./assets/' + authorData.avatar} />
-          <Books onWrongAnswer={this.onWrongAnswer}
-            onRightAnswer={this.onRightAnswer}
-            bookStyle={bookStyle}
-            selectedBook={selectedBook}
-            showContinueButton={showContinueButton}
-            onContinue={this.onContinue}
-            selectBook={this.selectBook}
-            authorData={authorData} />
-        </div>
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <React.Fragment>
+          <div className='container'>
+            <Header />
+            <Route exact path="/" component={MainBodyWrapper} />
+            <Route path="/add" component={AuthorFormWrapper} />
+            <Footer />
+          </div>
+        </React.Fragment>
+      </BrowserRouter>
     );
   }
 }
-
 export default App;
