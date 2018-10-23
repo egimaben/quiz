@@ -63,9 +63,7 @@ it('app responds accurately to all user interaction',()=>{
   expect(app.state().bookStyle).toBe('book');
   expect(app.state().selectedBook).toBe('');
   expect(app.state().index).toBe(1);
-  
-  // expect(booksDiv.length).toBe(4);
-})
+  })
 
 
 

@@ -8,5 +8,13 @@ exports[`renders correctly 1`] = `
     Author Quiz
   </h2>
   Do you know your authors?
+  <p>
+    <a
+      href="/add"
+      onClick={[Function]}
+    >
+      Add your own?
+    </a>
+  </p>
 </header>
 `;
