@@ -1,7 +1,7 @@
 'use strict'
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {Books} from '../quizComponents';
+import Books from '../components/Books';
 it('displays books component correctly',()=>{
     let  authorData={bookOptions:[],authoredBook:'',avatar:''};
     let onContinue=jest.fn();

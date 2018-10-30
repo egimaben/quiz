@@ -1,12 +1,11 @@
 'use strict'
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Header from '../components/Header';
-import {MemoryRouter as Router} from 'react-router-dom';
-
-it('renders correctly',()=>{
+import AuthorForm from '../components/AuthorForm';
+it('displays author form correctly',()=>{
+    let onSubmit=jest.fn();
     const tree = renderer.create(
-        <Router><Header /></Router>
+        <AuthorForm onSubmit={onSubmit}/>
     ).toJSON();
     expect(tree).toMatchSnapshot();
 })

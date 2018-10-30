@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Book} from '../quizComponents';
+import Book from '../components/Book';
 import {mount} from 'enzyme';
 const authorData={authoredBook:'animal farm'};
 console.error = err => { throw new Error(err); };

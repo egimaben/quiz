@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Header} from '../quizComponents';
+import Header from '../components/Header';
 import {MemoryRouter as Router} from 'react-router-dom'
 console.error = err => { throw new Error(err); };
 console.warn = warning => { throw new Error(warning); };

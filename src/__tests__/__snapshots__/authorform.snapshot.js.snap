@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displays author form correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <label>
+    Name:
+    <br />
+    <input
+      name="authorName"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+  </label>
+  <br />
+  <label>
+    Book:
+    <br />
+    <input
+      name="authoredBook"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+  </label>
+  <br />
+  <label>
+    Avatar:
+    <br />
+    <input
+      name="avatar"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+  </label>
+  <br />
+  <label>
+    Book Options:
+    <br />
+    <br />
+    <input
+      name="booktmp"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <button
+      className="add-button"
+      onClick={[Function]}
+      type="button"
+    >
+      add
+    </button>
+  </label>
+  <br />
+  <input
+    type="submit"
+    value="Submit"
+  />
+</form>
+`;

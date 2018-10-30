@@ -1,5 +1,5 @@
 import React from 'react';
-import { MiniDelete } from './quizComponents';
+import MiniDelete from './MiniDelete';
 export default class AuthorForm extends React.Component {
     state = {
         authorName: '',
@@ -37,10 +37,8 @@ export default class AuthorForm extends React.Component {
             }
         });
     }
-
     render() {
         const { authorName, authoredBook, avatar, booktmp } = this.state;
-
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
@@ -59,7 +57,7 @@ export default class AuthorForm extends React.Component {
                     Book Options:
             <br />
                     {
-                        this.state.bookOptions.map((book,index) => <MiniDelete key={index} item={book} callback={this.removeBook} />)
+                        this.state.bookOptions.map((book, index) => <MiniDelete key={index} item={book} callback={this.removeBook} />)
                     }
                     <br /><input type="text" value={booktmp} name='booktmp' onChange={this.handleChange} />
                     <button className='add-button' type='button' onClick={this.addBook}>add</button>

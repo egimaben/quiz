@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displays delete button component correctly 1`] = `
+Array [
+  <button
+    onClick={[Function]}
+  >
+    x
+  </button>,
+  <div>
+    item 1
+  </div>,
+]
+`;

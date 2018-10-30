@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Books} from '../quizComponents';
-import {mount,shallow} from 'enzyme';
+import Books from '../components/Books';
+import {shallow} from 'enzyme';
 console.error = err => { throw new Error(err); };
 console.warn = warning => { throw new Error(warning); };
 let  authorData={bookOptions:[],authoredBook:'',avatar:''};

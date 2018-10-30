@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { MainBody, Header, Footer } from './quizComponents';
+import MainBody from './components/MainBody';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import './App.css';
 import { data } from './data';
 import { BrowserRouter, Route, withRouter } from 'react-router-dom';
-import AuthorForm from './AuthorForm';
+import AuthorForm from './components/AuthorForm';
 class App extends Component {
   state = {
     userPassed: false,

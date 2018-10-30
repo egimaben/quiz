@@ -1,7 +1,7 @@
 'use strict'
 import React from 'react';
 import renderer from 'react-test-renderer';
-import {Book} from '../quizComponents';
+import Book from '../components/Book';
 
 it('uses right selection/red highlight',()=>{
     
